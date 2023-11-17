@@ -11,6 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 import model.DetailTransaction;
@@ -32,7 +33,7 @@ public class MenuTransactions extends JFrame{
         GridLayout gl = new GridLayout(0,1,2,2);
         panelTransaction.setLayout(gl);
         String result = "";
-        JTextField finalResult = new JTextField();
+        JTextArea finalResult = new JTextArea();
         
         for (DetailTransaction tmpDt : transactionsList) {
             result += tmpDt.toString() + "\n";
