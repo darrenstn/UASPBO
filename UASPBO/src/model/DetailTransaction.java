@@ -48,5 +48,10 @@ public class DetailTransaction {
     public int getTotalPrice() {
         return totalPrice;
     }
+
+    @Override
+    public String toString() {
+        return "DetailTransaction{" + "id=" + id + ", userId=" + userId + ", userName=" + userName + ", gameId=" + gameId + ", gameName=" + gameName + ", totalPrice=" + totalPrice + '}';
+    }
     
 }
