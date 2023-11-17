@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package main;
-
+import view.Login;
 /**
  *
  * @author Darren
@@ -15,7 +15,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Test Version Control");
+        new Login();
     }
     
 }
