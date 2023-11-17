@@ -60,6 +60,9 @@ public class GameList extends JFrame{
                 } else {
                     JOptionPane.showMessageDialog(null, "Gagal Membeli", "Error", JOptionPane.PLAIN_MESSAGE);
                 }
+                buyGame.get(index).setVisible(false);
+                panelGame.revalidate();
+                panelGame.repaint();
             });
             
             panelGame.add(nameGame.get(index));

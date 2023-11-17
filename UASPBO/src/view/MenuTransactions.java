@@ -35,7 +35,7 @@ public class MenuTransactions extends JFrame{
         JTextField finalResult = new JTextField();
         
         for (DetailTransaction tmpDt : transactionsList) {
-            result += tmpDt.toString();
+            result += tmpDt.toString() + "\n";
         }
         finalResult.setText(result);
         panelTransaction.add(finalResult);
