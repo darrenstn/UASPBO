@@ -40,6 +40,8 @@ public class GameList extends JFrame{
             new MenuTransactions(user);
         });
         
+        panelGame.add(menuTransaction);
+        
         ArrayList<JTextField> nameGame = new ArrayList<>();
         ArrayList<JTextField> genreGame = new ArrayList<>();
         ArrayList<JTextField> priceGame = new ArrayList<>();
@@ -65,33 +67,6 @@ public class GameList extends JFrame{
             panelGame.add(priceGame.get(index));
             panelGame.add(buyGame.get(index));
         }
-        
-        
-        JLabel labelEmail = new JLabel("Email : ");
-        JTextField emailLogin = new JTextField("");
-        JLabel labelPassword = new JLabel("Password : ");
-        JTextField passwordLogin = new JTextField("");
-        JButton login = new JButton("Login");
-        
-        login.addActionListener(e -> {
-            email = emailLogin.getText();
-            password = passwordLogin.getText();
-            
-            User user = ctrlr.getUser(email, password);
-            
-            if(user!=null){
-                new (p);
-                this.dispose();
-            } else {
-                JOptionPane.showMessageDialog(null, "Gagal Login", "Error", JOptionPane.PLAIN_MESSAGE);
-            }
-        });
-        
-        panelGame.add(labelEmail);
-        panelGame.add(emailLogin);
-        panelGame.add(labelPassword);
-        panelGame.add(passwordLogin);
-        panelGame.add(login);
         
         this.add(panelGame);
         this.setTitle(fTitle.getText());
