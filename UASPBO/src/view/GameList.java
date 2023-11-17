@@ -51,7 +51,7 @@ public class GameList extends JFrame{
             int index = gameList.indexOf(tmpGame);
             nameGame.add(new JTextField(tmpGame.getName()));
             genreGame.add(new JTextField(tmpGame.getGenre()));
-            priceGame.add(new JTextField(tmpGame.getPrice()));
+            priceGame.add(new JTextField(String.valueOf(tmpGame.getPrice())));
             buyGame.add(new JButton("Buy"));
             buyGame.get(index).addActionListener(e -> {
                 boolean success = ctrlr.addTransaction(user.getId(), tmpGame.getId());
